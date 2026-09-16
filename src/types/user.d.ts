@@ -2,7 +2,7 @@ import {Role} from "@/types/role"
 
 type User = {
     id: string;
-    name: string | null;
+    name?: string | null;
     phone: string;
     email: string | null;
     avatar: string | null;

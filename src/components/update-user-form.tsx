@@ -59,7 +59,7 @@ export const UpdateUserForm = (props: UpdateUserFormProps) => {
                                 id="name"
                                 type="text"
                                 {...register('name')}
-                                defaultValue={props.user?.name}
+                                defaultValue={props.user?.name ?? ''}
                                 className="myinput"
                             />
                         </div>
@@ -69,7 +69,7 @@ export const UpdateUserForm = (props: UpdateUserFormProps) => {
                             <input
                                 id="email"
                                 type="email"
-                                defaultValue={props.user?.email}
+                                defaultValue={props.user?.email ?? ''}
                                 className="myinput disabled:bg-gray-100! disabled:text-gray-500!"
                                 {...register('email')}
                             />
