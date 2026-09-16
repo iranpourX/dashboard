@@ -1,19 +1,13 @@
 "use client"
 
-import {toast} from "sonner";
+import {toast} from "sonner"
 import {useRouter} from "next/navigation"
 import {useForm, SubmitHandler} from "react-hook-form"
 import {zodResolver} from "@hookform/resolvers/zod"
 import {useUpdateProfile} from "@/hooks/use-update-profile"
 import Btn from '@/components/ui/btn'
-
+import {User} from "@/types/user";
 import {UpdateProfileInput, UpdateProfileSchema} from "@/lib/validation/profile"
-
-type User = {
-    name: string
-    phone: string
-    email: string
-} | undefined
 
 interface UpdateUserFormProps {
     user: User
